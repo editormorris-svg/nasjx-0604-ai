@@ -6,11 +6,17 @@ Canonical source and governance remain in the private `editormorris-svg/GPT-ZYK`
 
 Public portal: `https://nasjx.0604.ai`
 
-## Planned layout
+## Current release layout
 
-- `resources/ai-club/`
-- `resources/grammar/g6/` … `resources/grammar/g12/`
-- `resources/stage7/`
-- later: `pd/`, `literature/`, `games/`
+- `resources/01 AI Club/`
+- `resources/02 Grammar Practice G6-G12/`
+- `resources/03 Stage 7 Grammar/`
+- `resources/04 Teacher PD/`
 
-Google Drive remains a backup/archive source. The public portal should prefer GitHub-hosted release files for users in mainland China.
+Teacher PD v0.1 contains the current NAS Jiaxing **Practical AI for Teachers** release generated from the refreshed portal source. Legacy 0604.ai workshop binaries are not part of the current release.
+
+Future lanes remain subject to their own publication gates: Literature teaching packs, additional Literature Games, Progression Tests and authenticated local-AI services.
+
+Google Drive remains the approved release source / backup archive for the automated public-resource sync. The public portal should prefer GitHub-hosted release files for users in mainland China.
+
+Last approved sync request: 2026-08-30 - Practical AI for Teachers v0.1.
