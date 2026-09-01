@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/sync-public-resources.yml'
       - 'PUBLIC_RESOURCE_REPOSITORY.md'
+      - 'PUBLIC_RESOURCE_ALLOWLIST.txt'
 
 permissions:
   contents: write
@@ -20,18 +21,31 @@ jobs:
       - name: Install Google Drive downloader
         run: python -m pip install --disable-pip-version-check gdown==5.2.0
 
-      - name: Download approved public resource folder
+      - name: Download approved release source
         run: |
           rm -rf resources-sync
           mkdir -p resources-sync
           gdown --folder 'https://drive.google.com/drive/folders/17W7nGnR402NGSEDgNmH75ELEeG1pn-wX' -O resources-sync
           find resources-sync -type f -print | sort
 
-      - name: Build clean public resource tree
+      - name: Build allowlisted public resource tree
         run: |
           rm -rf resources
           mkdir -p resources
-          cp -a resources-sync/. resources/
+          while IFS= read -r path; do
+            [ -n "$path" ] || continue
+            source_path="resources-sync/$path"
+            if [ ! -f "$source_path" ]; then
+              echo "Missing allowlisted release file: $path" >&2
+              exit 1
+            fi
+            mkdir -p "resources/$(dirname "$path")"
+            cp "$source_path" "resources/$path"
+          done < PUBLIC_RESOURCE_ALLOWLIST.txt
+          if find resources -type f | grep -Eiq '(teacher.?key|answer.?book|classroom.?edition|complete.?collection)'; then
+            echo 'Protected teacher/answer material entered the public tree.' >&2
+            exit 1
+          fi
           find resources -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
 
       - name: Commit synced release files
