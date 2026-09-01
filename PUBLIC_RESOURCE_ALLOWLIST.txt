@@ -1,0 +1,12 @@
+resources/01 AI Club/AI_CLUB_ECA_STUDENT_COURSEBOOK_v1.2_COMPLETE_PRINT_PACK.zip
+resources/01 AI Club/AI_CLUB_ECA_STUDENT_COURSEBOOK_v1.2_PRINT_READY.pdf
+resources/02 Grammar Practice G6-G12/G6/NASJX_English_Grammar_Practice_G6_v0.4.pdf
+resources/02 Grammar Practice G6-G12/G7/NASJX_English_Grammar_Practice_G7_v0.4.pdf
+resources/02 Grammar Practice G6-G12/G8/NASJX_English_Grammar_Practice_G8_v0.4.pdf
+resources/02 Grammar Practice G6-G12/G9/NASJX_English_Grammar_Practice_G9_v0.1.pdf
+resources/02 Grammar Practice G6-G12/G10/NASJX_English_Grammar_Practice_G10_v0.1.pdf
+resources/02 Grammar Practice G6-G12/G11/NASJX_English_Grammar_Practice_G11_v0.1.pdf
+resources/02 Grammar Practice G6-G12/G12/NASJX_English_Grammar_Practice_G12_v0.1.pdf
+resources/03 Stage 7 Grammar/NAS_Jiaxing_Stage7_Grammar_Student_Book_v0.2.pdf
+resources/04 Teacher PD/NASJX_Practical_AI_for_Teachers_Handout_v0.1.pdf
+resources/04 Teacher PD/NASJX_Practical_AI_for_Teachers_v0.1_PUBLIC_PACK.zip
